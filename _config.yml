@@ -1,10 +1,10 @@
-# Site settings
-name: Lyman's Blog
-email: 134196459@163.com
-author: Lyman Xu
-url: https://github.com/LymanXu
-resume_site: https://github.com/LymanXu/
-github: https://github.com/LymanXu/
+﻿# Site settings
+name: Solan's Blog
+email: 931802565@qq.com
+author: Solan Liu
+url: https://github.com/SolanLiu
+resume_site: https://github.com/SolanLiu/
+github: https://github.com/SolanLiu/
 baseurl: "/Blog"
 description: Everyday is different, 一生以歌!
 meta_description: 愿一生以歌投入每天永不变
@@ -29,7 +29,7 @@ FB:
   comments :
     provider : duoshuo
     duoshuo:
-        short_name : lyman
+        short_name : Solan
     disqus :
         short_name : xuzhuang
     # facebook :

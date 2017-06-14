@@ -1,0 +1,41 @@
+# Site settings
+name: Lyman's Blog
+email: 134196459@163.com
+author: Lyman Xu
+url: https://github.com/LymanXu
+resume_site: https://github.com/LymanXu/
+github: https://github.com/LymanXu/
+baseurl: "/Blog"
+description: Everyday is different, 一生以歌!
+meta_description: 愿一生以歌投入每天永不变
+motto: A little step everyday
+banner: 学而不思则罔，思而不学则殆。
+
+#permalink: /:categories/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+paginate: 10
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+github_username: luoyan35714
+highlighter: rouge
+
+# Build settings
+markdown: kramdown
+
+baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
+
+FB:
+  comments :
+    provider : duoshuo
+    duoshuo:
+        short_name : lyman
+    disqus :
+        short_name : xuzhuang
+    # facebook :
+    #   appid : 123
+    #   num_posts: 5
+    #   width: 580
+    #   colorscheme: light
+
+theme: jekyll-theme-cayman

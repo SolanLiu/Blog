@@ -15,7 +15,8 @@ tag: 资源链接
 
 
 
-#### 学习网址
+## 1. 学习网址
+
 网易公开课: <https://open.163.com/>  
 慕课网-程序员的梦工厂： <http://www.imooc.com/>  
 菜鸟教程：<http://www.runoob.com/>  
@@ -25,27 +26,37 @@ Coursera在线教育：<https://www.coursera.org/>
 Udacity公开课的链接：<https://www.udacity.com/wiki/downloads>  
 机器学习公开课链接：<https://bi.snu.ac.kr/Courses/>  
 
-#### Deep Learning
+## 2. Deep Learning
 
-#### Machine Learning
 
-#### Math
+## 3. Machine Learning
 
-#### Computer Vision
 
-#### Object Detection
+## 4. Math
 
-#### 国内科研团队和牛人主页
 
-#### 国外科研团队和牛人主页
+## 5. Computer Vision
 
-#### 文献检索
+
+## 6. Object Detection
+
+
+## 7. 国内科研团队和牛人主页
+
+
+## 8. 国外科研团队和牛人主页
+
+
+## 9. 文献检索
+
 arXiv.org Search：<https://arxiv.org/find>  
 六维空间-东北大学IPv6站：<http://ipv6.neu6.edu.cn/archives/7>  
 
-#### 挑战赛
+## 10. 挑战赛
 
-#### 动漫and电影
+
+## 11. 动漫and电影
+
 哔哩哔哩：<https://www.bilibili.com/>  
 嘀哩嘀哩：<http://www.dilidili.wang/>  
 音范丝：<http://www.yinfans.com/>  

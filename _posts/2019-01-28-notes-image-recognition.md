@@ -15,11 +15,11 @@ tag: Image Algorithm
 
 
 
-<center><font face="微软雅黑" size=6 color=#000000 >**图像识别**</font></center>
+<center>**图像识别**</center>
 
 &emsp;&emsp;图像识别有时也可称为图像识别，主要是对图像中感兴趣的目标进行检测，从而获取它们的客观信息并同时建立对图像的描述。图像识别的主要过程如图1所示：
 
-<center>![图 1  图像识别的主要过程]({{'/styles/images/image recognition/图1.png' | prepend: site.baseurl }})</center>
+<center>![图 1  图像识别的主要过程]({{'/styles/images/image recognition/图1.jpg' | prepend: site.baseurl }})</center>
 
 ## 1. 特征提取
 
@@ -90,7 +90,7 @@ c)	其他方法，例如有限元法，旋转函数和小波描述符等
 &emsp;&emsp;c)	停止准则(Stopping Criterion ):停止准则是与评价函数相关的，一般是一个阈值，当评价函数值达到这个阈值后就可停止搜索。  
 &emsp;&emsp;d)	验证过程(Validation Procedure ):在验证数据集上验证选出来的特征子集的有效性。  
 
-<center>![图 2  特征选择的过程 ( M.Dash and H. Liu 1997 )]({{'/styles/images/image recognition/图2.png' | prepend: site.baseurl }})</center>
+<center>![图 2  特征选择的过程 ( M.Dash and H. Liu 1997 )]({{'/styles/images/image recognition/图2.jpg' | prepend: site.baseurl }})</center>
 
 #### 1.3.1 产生过程
 
@@ -124,7 +124,7 @@ c)	其他方法，例如有限元法，旋转函数和小波描述符等
 &emsp;&emsp;算法描述：使用序列前向选择(SFS)从空集开始，同时使用序列后向选择(SBS)从全集开始搜索，当两者搜索到一个相同的特征子集C时停止搜索。
 双向搜索的出发点是$2N^{k/2}<N^k$。如下图所示，O点代表搜索起点，A点代表搜索目标。灰色的圆代表单向搜索可能的搜索范围，绿色的2个圆表示某次双向搜索的搜索范围，容易证明绿色的面积必定要比灰色的要小。  
 
-<center>![图 4  双向搜索]({{'/styles/images/image recognition/图4.png' | prepend: site.baseurl }})</center>
+<center>![图 4  双向搜索]({{'/styles/images/image recognition/图4.jpg' | prepend: site.baseurl }})</center>
 
 &emsp;&emsp;4)	增L去R选择算法( LRS , Plus-L Minus-R Selection )  
 &emsp;&emsp;该算法有两种形式:  

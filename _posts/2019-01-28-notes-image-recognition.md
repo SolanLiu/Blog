@@ -1,7 +1,7 @@
 ---
 layout: post
 #标题配置
-title:  Image Segmentation
+title:  Image Recognition
 #时间配置
 date:   2019-01-28 01:08:00 +0800
 #大类配置
@@ -19,7 +19,7 @@ tag: Image Algorithm
 
 &emsp;&emsp;图像识别有时也可称为图像识别，主要是对图像中感兴趣的目标进行检测，从而获取它们的客观信息并同时建立对图像的描述。图像识别的主要过程如图1所示：
 
-![图像识别的主要过程]({{'/styles/images/image recognition/图1.jpg' | prepend: site.baseurl }})
+<center>![图像识别的主要过程]({{'/styles/images/image recognition/图1.jpg' | prepend: site.baseurl }})</center>
 
 ## 1. 特征提取
 

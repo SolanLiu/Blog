@@ -15,11 +15,11 @@ tag: Image Algorithm
 
 
 
-# 图像分割
+# 图像识别
 
 &emsp;&emsp;图像识别有时也可称为图像识别，主要是对图像中感兴趣的目标进行检测，从而获取它们的客观信息并同时建立对图像的描述。图像识别的主要过程如图1所示：
 
-<center>![图像识别的主要过程]({{'/styles/images/image recognition/图1.jpg' | prepend: site.baseurl }})</center>
+![图像识别的主要过程]({{'/styles/images/image recognition/图1.jpg' | prepend: site.baseurl }})
 
 ## 1. 特征提取
 

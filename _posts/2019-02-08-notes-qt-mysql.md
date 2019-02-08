@@ -15,15 +15,14 @@ tag: Qt
 
 
 
-# Qt and MySQL
 
-![图像识别的主要过程]({{'/styles/images/database design/图1.png' | prepend: site.baseurl }})
+![图像识别的主要过程]({{'/styles/images/qt/图1.png' | prepend: site.baseurl }})
 
 &emsp;&emsp;驱动层为具体的数据库和SQL接口层之间提供了底层的桥梁；SQL接口层提供了对数据库的访问，其中，QSqlDatabase类用来创建连接，QSqlQuery类可以使用SQL语句实现与数据库交互；用户接口层实现了将数据库的数据链接到窗口部件上。  
 ## 1. 连接数据库
 ### 1.1 SQL数据库驱动
 
-![图像识别的主要过程]({{'/styles/images/database design/图2.png' | prepend: site.baseurl }})
+![图像识别的主要过程]({{'/styles/images/qt/图2.png' | prepend: site.baseurl }})
  
 ## 2. 创建数据库连接
 &emsp;&emsp;QSqlDatabase db = QSqlDatabae::addDatabase(“QMYSQL”);  ---创建一个连接对象，默认连接  

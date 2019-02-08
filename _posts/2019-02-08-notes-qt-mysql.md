@@ -31,7 +31,6 @@ tag: Qt
 &emsp;&emsp;db.setUserName(“acarlson”);  ---设置用户名  
 &emsp;&emsp;db.setPassword(“luTbSbAs”);  ---设置密码  
 &emsp;&emsp;bool ok = db.open();  ---打开该连接以便使用  
-
 &emsp;&emsp;QSqlDatabase first= QSqlDatabae::addDatabase(“QMYSQL”);  ---创建一个连接对象，默认连接  
 &emsp;&emsp;QSqlDatabase db = QSqlDatabae::addDatabase(“QMYSQL”);  ---创建一个连接对象，默认连接  
 

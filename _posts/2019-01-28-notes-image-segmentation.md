@@ -73,7 +73,7 @@ $$ \sigma^2 = p_A(\omiga_A-\omiga_0)^2+p_B(\omiga_B-\omiga_0)^2 $$
 
 &emsp;&emsp;分水岭比较经典的计算方法是L．Vincent于1991年在PAMI上提出的。传统的分水岭分割方法，是一种基于拓扑理论的数学形态学的分割方法，其基本思想是把图像看作是测地学上的拓扑地貌，图像中每一像素的灰度值表示该点的海拔高度，每一个局部极小值及其影响区域称为集水盆地，而集水盆地的边界则形成分水岭。分水岭的概念和形成可以通过模拟浸入过程来说明。在每一个局部极小值表面，刺穿一个小孔，然后把整个模型慢慢浸人水中，随着浸入的加深，每一个局部极小值的影响域慢慢向外扩展，在两个集水盆汇合处构筑大坝如下图所示，即形成分水岭。
 
-![图像识别的主要过程]({{'/styles/images/image segmentation/图1.jpg' | prepend: site.baseurl }})
+![图像识别的主要过程]({{'/styles/images/image segmentation/图1.png' | prepend: site.baseurl }})
 
 图 1  传统分水岭算法示意图
 
@@ -81,7 +81,7 @@ $$ \sigma^2 = p_A(\omiga_A-\omiga_0)^2+p_B(\omiga_B-\omiga_0)^2 $$
 
 &emsp;&emsp;由于基于梯度图像的直接分水岭算法容易导致图像的过分割，产生这一现象的原因主要是由于输入的图像存在过多的极小区域而产生许多小的集水盆地，从而导致分割后的图像不能将图像中有意义的区域表示出来，所以必须对分割结果的相似区域进行合并。OpenCV提供了一种改进的分水岭算法，使用一系列预定义标记来引导图像分割的定义方式。使用OpenCV的分水岭算法cv::wathershed，需要输入一个标记图像，图像的像素值为32位有符号正数（CV\_32S类型），每个非零像素代表一个标签。它的原理是对图像中部分像素做标记，表明它的所属区域是已知的。分水岭算法可以根据这个初始标签确定其他像素所属的区域。传统的基于梯度的分水岭算法和改进后基于标记的分水岭算法示意图如下图所示：
 
-![图像识别的主要过程]({{'/styles/images/image segmentation/图2.jpg' | prepend: site.baseurl }})
+![图像识别的主要过程]({{'/styles/images/image segmentation/图2.png' | prepend: site.baseurl }})
 
 图 2  传统分水岭算法和基于标记分水岭算法原理图
 
@@ -94,7 +94,7 @@ $$ \sigma^2 = p_A(\omiga_A-\omiga_0)^2+p_B(\omiga_B-\omiga_0)^2 $$
 
 ## 4. 基于图论的分割方法
 
-![图像识别的主要过程]({{'/styles/images/image segmentation/图3.jpg' | prepend: site.baseurl }})
+![图像识别的主要过程]({{'/styles/images/image segmentation/图3.png' | prepend: site.baseurl }})
 
 &emsp;&emsp;此类方法把图像分割问题与图的最小割（min cut）问题相关联。首先将图像映射为带权无向图G=<V，E>，图中每个节点N∈V对应于图像中的每个像素，每条边∈E连接着一对相邻的像素，边的权值表示了相邻像素之间在灰度、颜色或纹理方面的非负相似度。而对图像的一个分割s就是对图的一个剪切，被分割的每个区域C∈S对应着图中的一个子图。而分割的最优原则就是使划分后的子图在内部保持相似度最大，而子图之间的相似度保持最小。基于图论的分割方法的本质就是移除特定的边，将图划分为若干子图从而实现分割。目前所了解到的基于图论的方法有GraphCut，GrabCut和Random Walk等。  
 &emsp;&emsp;图像映射为图之后，根据采取的准则方法，图像中的前景和背景都转化为了图中的顶点，并且每个顶点之间都被赋予了一定的权值。若将这个图割开来一分为二，当割在前景顶点和背景顶点之间时能得到最小的一个割。Graph Cut采用图论中的最小割（Minimum Cut）来实现分割，并用最大流（Max-flow）来得到这个最小割。Grub Cut是另一种基于图论的图像分割方法。其从图像到图的基本映射原理与Graph Cut是一样的，区别在于Grub Cut的交互方式更简单，只需要用户画一个矩形框，将待分割的目标完整地框起来，算法将自动迭代完成图像的分割。同时与Graph Cut的目标和背景的模型是灰度直方图不同，Grab Cut取代为RGB三通道的混合高斯模型GMM。  
@@ -103,7 +103,7 @@ $$ \sigma^2 = p_A(\omiga_A-\omiga_0)^2+p_B(\omiga_B-\omiga_0)^2 $$
 
 &emsp;&emsp;Graph Cuts中有两种顶点、两种边。第一种普通顶点对应于图像中的每个像素。每两个邻域顶点（对应于图像中每两个邻域像素）的连接就是一条边。这种边也叫n-links。除图像像素外，还有另外两个终端顶点，叫S（source：源点，取源头之意）和T（sink：汇点，取汇聚之意）。每个普通顶点和这2个终端顶点之间都有连接，组成第二种边。这种边也叫t-links。
 
-![图像识别的主要过程]({{'/styles/images/image segmentation/图4.jpg' | prepend: site.baseurl }})
+![图像识别的主要过程]({{'/styles/images/image segmentation/图4.png' | prepend: site.baseurl }})
  
 图 4  分割图像对应的s-t图
 

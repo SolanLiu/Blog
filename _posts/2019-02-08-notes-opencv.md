@@ -24,6 +24,7 @@ tag: Opencv
 		int block_size;  
 		int free_space; 
 		} CvMemStorage;
+
 &emsp;&emsp;CvMemStorage：内存存储器，可用来存储诸如序列、轮廓、图形、子划分等动态增长数据结构的底层结构，由一系列以同等大小的内存块构成，呈列表型。  
 &emsp;&emsp;bottom域指的是列首，top域指的是当前指向的块但未必是列尾。在bottom和top之间所有的块(包括bottom, 不包括top）被完全占据了空间；在 top和列尾之间所有的块（包括块尾，不包括top)则是空的；而top块本身则被占据了部分空间。  
 &emsp;&emsp;创建内存块：   

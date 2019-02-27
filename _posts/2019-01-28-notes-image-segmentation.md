@@ -15,6 +15,7 @@ tag: Image Algorithm
 
 
 
+
 # 图像分割
 
 &emsp;&emsp;所谓图像分割指的是根据灰度、颜色、纹理和形状等特征把图像划分成若干互不交迭的区域，并使这些特征在同一区域内呈现出相似性，而在不同区域间呈现出明显的差异性。
@@ -27,13 +28,13 @@ tag: Image Algorithm
 - **Otsu法（最大类间方差法）**
 
 &emsp;&emsp;该算法是日本人Otsu提出的一种动态阈值分割算法。它的主要思想是按照灰度特性将图像划分为背景和目标两部分，划分依据为选取门限值，使得背景和目标之间的方差最大。其主要的实现原理如下：  
-&emsp;&emsp;1）建立图像灰度直方图（共有L个灰度级，每个出现概率为p）   
-
-$$ N = \sum^{L-1}_{i=0}n_i, p_i = \frac{n_i}{N} $$ 
+&emsp;&emsp;1）建立图像灰度直方图（共有L个灰度级，每个出现概率为p）  
+ 
+&emsp;&emsp;<a href="https://www.codecogs.com/eqnedit.php?latex=N&space;=&space;\sum^{L-1}_{i=0}n_i,&space;p_i&space;=&space;\frac{n_i}{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?N&space;=&space;\sum^{L-1}_{i=0}n_i,&space;p_i&space;=&space;\frac{n_i}{N}" title="N = \sum^{L-1}_{i=0}n_i, p_i = \frac{n_i}{N}" /></a> 
 
 &emsp;&emsp;2）计算背景和目标的出现概率，计算方法如下：
   
-$$ p_A = \sum^t_{i=0}p_i, p_B = \sum^{L-1}_{i=t+1}p_i = 1-p_A $$ 
+&emsp;&emsp;<a href="https://www.codecogs.com/eqnedit.php?latex=p_A&space;=&space;\sum^t_{i=0}p_i,&space;p_B&space;=&space;\sum^{L-1}_{i=t&plus;1}p_i&space;=&space;1-p_A" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_A&space;=&space;\sum^t_{i=0}p_i,&space;p_B&space;=&space;\sum^{L-1}_{i=t&plus;1}p_i&space;=&space;1-p_A" title="p_A = \sum^t_{i=0}p_i, p_B = \sum^{L-1}_{i=t+1}p_i = 1-p_A" /></a>
 
 上式中假设t为所选定的阈值，A代表背景（灰度级为0~N）,根据直方图中的元素可知，Pa为背景出现的概率，同理B为目标，Pb为目标出现的概率。  
 &emsp;&emsp;3）计算A和B两个区域的类间方差如下：  

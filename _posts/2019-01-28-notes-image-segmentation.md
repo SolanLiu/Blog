@@ -15,6 +15,7 @@ tag: Image Algorithm
 
 
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 # 图像分割
 
@@ -36,7 +37,7 @@ tag: Image Algorithm
   
 &emsp;&emsp;<a href="https://www.codecogs.com/eqnedit.php?latex=p_A&space;=&space;\sum^t_{i=0}p_i,&space;p_B&space;=&space;\sum^{L-1}_{i=t&plus;1}p_i&space;=&space;1-p_A" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p_A&space;=&space;\sum^t_{i=0}p_i,&space;p_B&space;=&space;\sum^{L-1}_{i=t&plus;1}p_i&space;=&space;1-p_A" title="p_A = \sum^t_{i=0}p_i, p_B = \sum^{L-1}_{i=t+1}p_i = 1-p_A" /></a>
 
-上式中假设t为所选定的阈值，A代表背景（灰度级为0~N）,根据直方图中的元素可知，Pa为背景出现的概率，同理B为目标，Pb为目标出现的概率。  
+上式中假设t为所选定的阈值，A代表背景（灰度级为0~N）,根据直方图中的元素可知，\\(p_a\\)为背景出现的概率，同理B为目标，Pb为目标出现的概率。  
 &emsp;&emsp;3）计算A和B两个区域的类间方差如下：  
 
 $$ \omiga_A = \sum^t_{i=0}i\frac{p_i}{p_A}, \omiga_B = \sum^{L-1}_{i=t+1}i\frac{p_i}{p_B} $$

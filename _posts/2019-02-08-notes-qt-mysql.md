@@ -12,10 +12,6 @@ tag: Qt
 
 * content
 {:toc}
-
-
-
-
 ![图像识别的主要过程]({{'/styles/images/qt/图1.png' | prepend: site.baseurl }})
 
 &emsp;&emsp;驱动层为具体的数据库和SQL接口层之间提供了底层的桥梁；SQL接口层提供了对数据库的访问，其中，QSqlDatabase类用来创建连接，QSqlQuery类可以使用SQL语句实现与数据库交互；用户接口层实现了将数据库的数据链接到窗口部件上。  
@@ -23,7 +19,7 @@ tag: Qt
 ### 1.1 SQL数据库驱动
 
 ![图像识别的主要过程]({{'/styles/images/qt/图2.png' | prepend: site.baseurl }})
- 
+
 ## 2. 创建数据库连接
 &emsp;&emsp;QSqlDatabase db = QSqlDatabae::addDatabase(“QMYSQL”);  ---创建一个连接对象，默认连接  
 &emsp;&emsp;db.setHostName(“bigblue”);  ---设置主机名  
@@ -37,7 +33,7 @@ tag: Qt
 **1. 传入MYSQL的图片背景出现空白**   
 
 &emsp;&emsp;在MYSQL中，max\_allowed\_packet的默认值为1M，所以，如果往Mysql数据库导入超过1M的文本文件或图片文件时，插入和更新会被max\_allowed\_packet参数限制而导入失败。
-  
+
 **2. 将图片存入数据库的方法**  
 
 -  一般的网站产品数据存放在数据库中，商品图片是上传到文件服务器，然后通过http服务器浏览商品图片。eg:电商网站  

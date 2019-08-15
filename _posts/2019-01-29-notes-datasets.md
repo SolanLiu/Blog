@@ -13,8 +13,6 @@ tag: Computer Network
 * content
 {:toc}
 
-
-
 # 数据库设计
 
 &emsp;&emsp;数据库设计就是根据业务系统的具体需要，结合我们所选用地DBMS(数据库管理系统)，为这个业务系统构造出最优的数据存储模型。并建立好数据库中的表结构及表与表之间的关联关系的过程。使之能有效的对应系统中的数据进行存储，并可以高效的对已经存储的数据进行访问。
@@ -49,11 +47,11 @@ tag: Computer Network
 ## 3. 物理设计
 
 - **选择合适的数据库管理系统**
- 
+
 ![图像识别的主要过程]({{'/styles/images/database design/图4.png' | prepend: site.baseurl }})
 
 ![图像识别的主要过程]({{'/styles/images/database design/图5.png' | prepend: site.baseurl }})
- 
+
 - **定义数据库、表及字段的命名规范**
 
 - **选择合适的字段类型**
@@ -61,7 +59,7 @@ tag: Computer Network
 &emsp;&emsp;当一个列可以选择多种类型时，应该优先考虑数字类型，其次是日期或二进制类型，最后是字符类型，对于相同级别的数据类型，应该优先选择占用空间小的数据类型。
 
 ![图像识别的主要过程]({{'/styles/images/database design/图6.png' | prepend: site.baseurl }})
- 
+
 &emsp;&emsp;Char与varchar：如果列中要存储的数据长度差不多一致，则考虑char，否则应该考虑varcha；如果列中的最大数据长度小于50Byte，则考虑char，一般不宜定义大于50Byte的char类型列。  
 &emsp;&emsp;decimal与float：非精确数据数据优先选择float。
 

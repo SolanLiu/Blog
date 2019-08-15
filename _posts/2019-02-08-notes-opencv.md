@@ -13,8 +13,6 @@ tag: Opencv
 * content
 {:toc}
 
-
-
 ## 1. test_snake model
 
 		typedef struct CvMemStorage {
@@ -30,7 +28,7 @@ tag: Opencv
 &emsp;&emsp;创建内存块：   
 
 		CvMemStorage* m_storage=cvCreateMemStorage(int block_size=0); 
-  
+
 &emsp;&emsp;block_size：存储块的大小以字节表示。如果大小是 0 byte, 则将该块设置成默认值 当前默认大小为64k。  
 &emsp;&emsp;函数cvCreateMemStorage 创建一内存块并返回指向块首的指针。起初，存储块是空的。
 函数cvClearMemStorage 将存储块的 top 置到存储块的头部（注：清空存储块中的存储内容）。该函数并不释放内存（仅清空内存）。  
@@ -48,7 +46,7 @@ tag: Opencv
 &emsp;&emsp;函数cvRestoreMemStoragePos 通过参数 pos恢复内存块的位置。该函数和函数 cvClearMemStorage是释放被占用内存块的唯一方法。注意：没有什么方法可去释放存储块中被占用的部分内存。  
 
 		void cvRestoreMemStoragePos( CvMemStorage* storage,CvMemStoragePos* pos );
-
+	
 		typedef struct CvSeq
 		{
 		    CV_SEQUENCE_FIELDS()
@@ -127,7 +125,7 @@ tag: Opencv
 		    int maxCount; 
 		    double epsilon; 
 		}; 
-
+	
 		int cvCreateTrackbar(
 		const char* trackbar_name, //滑动条的名称
 		const char* window_name, //窗口的名称，滑动条不会遮挡图像
@@ -143,7 +141,7 @@ tag: Opencv
 &emsp;&emsp;函数cvLine 在图像中的点1和点2之间画一条线段。线段被图像或感兴趣的矩形(ROI rectangle)所裁剪。对于具有整数坐标的non-antialiasing 线条，使用8-连接或者4-连接Bresenham 算法。画粗线条时结尾是圆形的。画 antialiased 线条使用高斯滤波。要指定线段颜色，用户可以使用使用宏CV_RGB( r, g, b )。  
 
 		void cvLine( CvArr* img, CvPoint pt1, CvPoint pt2, CvScalar color,
-             int thickness=1, int line_type=8, int shift=0 );
+	         int thickness=1, int line_type=8, int shift=0 );
 
 &emsp;&emsp;img: 图像。    
 &emsp;&emsp;pt1: 线段的第一个端点。  
